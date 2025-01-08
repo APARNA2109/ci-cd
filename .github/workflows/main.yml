@@ -1,1 +1,17 @@
-print("Hello, World!")
+name: Print Hello World
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Print Hello World
+      run: echo "Hello, World!"
